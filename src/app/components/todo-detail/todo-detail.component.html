@@ -1,0 +1,14 @@
+<div class="p-3 border border-1" >
+    <small>Details Todo Component</small>
+
+    <div class="card" *ngIf="todoData.description">
+        <img src="../../../assets/road-sign-361514_960_720.webp" class="img-fluid mx-auto" width="100" alt="">
+        <div class="card-header">
+            {{todoData.title}}
+        </div>
+
+        <div class="card-body">
+            {{todoData.description}}
+        </div>
+    </div>
+</div>

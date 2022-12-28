@@ -1,0 +1,27 @@
+<div class="py-5">
+    <div class="container">
+        <div class="mb-4 bg-warning text-light">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                </div>
+            </nav>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <app-todo-add (newItemEvent)="getTodoList($event)"></app-todo-add>
+            </div>
+            <div class="col-md-6">
+                <app-todo-detail [todoData]="todoDetail"></app-todo-detail>
+            </div>
+        </div>
+        <div class="p-3 border border-1">
+            <small>List Todos Component</small>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let item of todoList">
+                    <app-list-todos [todo]="item" (itemDetail)="getDetail($event)"></app-list-todos>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
